@@ -13,7 +13,7 @@ export const MenuData = [
             { nombre: "Boneless con salsa búfalo o BBQ", precio: 160 },
             {
                 nombre: "Chilaca rellena de queso Philadelphia, carne y tocino",
-                precio: 70
+                precio: 170
             }
         ]
     },
@@ -27,8 +27,8 @@ export const MenuData = [
             { nombre: "Pescado sin pieza", precio: { chico: 75 } },
             { nombre: "Camarón", precio: { chico: 90, grande: 140 } },
             { nombre: "Filete", precio: { chico: 80, grande: 120 } },
-            { nombre: "Mixto", precio: { chico: 80, grande: 180 } },
-            { nombre: "Sopa de mariscos", precio: { chico: 30, grande: 200 } },
+            { nombre: "Mixto", precio: { chico: 130, grande: 180 } },
+            { nombre: "Sopa de mariscos", precio: { chico: 130, grande: 200 } },
             { nombre: "Vaso camarón", precio: 45 },
             { nombre: "Vaso pescado", precio: 35 }
         ]
@@ -39,9 +39,9 @@ export const MenuData = [
         nombre: "MARISCOS",
         subtitulo: "FRESCOS DEL MAR A TU MESA",
         items: [
-            { nombre: "Camarón", precio: { chico: 30, grande: 190 } },
+            { nombre: "Camarón", precio: { chico: 130, grande: 190 } },
             { nombre: "Campechana", precio: { chico: 160, grande: 210 } },
-            { nombre: "Pulpo", precio: { chico: 90, grande: 190 } },
+            { nombre: "Pulpo", precio: { chico: 130, grande: 190 } },
             { nombre: "Ceviche", precio: { chico: 70, grande: 100 } }
         ]
     },
@@ -117,7 +117,7 @@ export const MenuData = [
         items: [
             {
                 nombre: "Tacos de arrachera",
-                precio: 50,
+                precio: 150,
                 descripcion: "4 tacos en harina o maíz con arrachera, cebolla, queso gratinado y guacamole"
             },
             { nombre: "Cortadillo", precio: 195 },
@@ -137,7 +137,7 @@ export const MenuData = [
         nombre: "FILETES Y CAMARÓN",
         subtitulo: "PREPARACIONES CLÁSICAS Y DE AUTOR",
         items: [
-            { nombre: "Empanizado", precio: { filete: 50, camaron: 190 } },
+            { nombre: "Empanizado", precio: { filete: 130, camaron: 190 } },
             { nombre: "A la mexicana", precio: { filete: 170, camaron: 190 } },
             { nombre: "A la diabla", precio: { filete: 170, camaron: 190 } },
             { nombre: "Al mojo de ajo", precio: { filete: 170, camaron: 190 } },
