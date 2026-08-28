@@ -1,0 +1,275 @@
+<section class="favoritos" id="menu">
+  <div class="encabezado">
+    <span>03</span>
+    <i></i>
+    <small>FAVORITOS DE LA CASA</small>
+  </div>
+
+  <div class="lista">
+    <div class="platillo">
+      <img src="https://images.pexels.com/photos/36720625/pexels-photo-36720625.jpeg" alt="T-Bone" />
+
+      <div class="info">
+        <h2>T-Bone</h2>
+      </div>
+
+      <div class="precio">
+        $350 <span>•</span>
+      </div>
+    </div>
+
+    <div class="platillo">
+      <img src="https://images.pexels.com/photos/36782575/pexels-photo-36782575.jpeg" alt="Rib Eye" />
+
+      <div class="info">
+        <h2>Rib Eye</h2>
+        <p>Cebolla asada · salchicha · elote · jalapeño</p>
+      </div>
+
+      <div class="precio">
+        $350 <span>•</span>
+      </div>
+    </div>
+
+    <div class="platillo">
+      <img src="https://images.pexels.com/photos/27643002/pexels-photo-27643002.jpeg" alt="Parrillada" />
+
+      <div class="info">
+        <h2>Parrillada De Arrachera</h2>
+      </div>
+
+      <div class="precio">
+        $1,100 <span>•</span>
+      </div>
+    </div>
+
+    <!-- <div class="platillo">
+            <img src="/fuente-caliente.jpg" alt="Fuente Caliente">
+
+            <div class="info">
+                <h2>Fuente Caliente</h2>
+            </div>
+
+            <div class="precio">
+                <span>•</span>
+            </div>
+        </div> -->
+  </div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .favoritos {
+    width: 100%;
+    /* max-width: 1100px; */
+    margin: 0 auto;
+    padding: 100px 40px;
+  }
+
+  /* ENCABEZADO */
+
+  .encabezado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 35px;
+  }
+
+  .encabezado span {
+    color: #b5965e;
+    font-size: 14px;
+  }
+
+  .encabezado i {
+    width: 25px;
+    height: 1px;
+    background: #333;
+  }
+
+  .encabezado small {
+    color: #777;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  /* LISTA */
+
+  .lista {
+    border-top: 1px solid #222;
+  }
+
+  /* PLATILLO */
+
+  .platillo {
+    min-height: 115px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 22px;
+
+    border-bottom: 1px solid #222;
+  }
+
+  /* IMAGEN */
+
+  .platillo img {
+    width: 78px;
+    height: 70px;
+
+    flex-shrink: 0;
+
+    object-fit: cover;
+
+    border-radius: 10px;
+  }
+
+  /* INFORMACIÓN */
+
+  .info {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .info h2 {
+    margin: 0;
+
+    color: #ddd;
+
+    font-family: Georgia, serif;
+
+    font-size: 29px;
+    font-weight: normal;
+  }
+
+  .info p {
+    margin: 6px 0 0;
+
+    color: #666;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  /* PRECIO */
+
+  .precio {
+    min-width: 80px;
+
+    color: #b5965e;
+
+    text-align: right;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+  }
+
+  .precio span {
+    margin-left: 8px;
+  }
+
+  /* =========================
+       TABLET
+    ========================= */
+
+  @media (max-width: 800px) {
+    .favoritos {
+      padding: 80px 30px;
+    }
+
+    .platillo {
+      min-height: 105px;
+      gap: 18px;
+    }
+
+    .platillo img {
+      width: 70px;
+      height: 65px;
+    }
+
+    .info h2 {
+      font-size: 26px;
+    }
+  }
+
+  /* =========================
+       CELULAR
+    ========================= */
+
+  @media (max-width: 600px) {
+    .favoritos {
+      padding: 70px 20px;
+    }
+
+    .encabezado {
+      margin-bottom: 25px;
+    }
+
+    .encabezado small {
+      letter-spacing: 2px;
+    }
+
+    .platillo {
+      min-height: 95px;
+      gap: 14px;
+    }
+
+    .platillo img {
+      width: 62px;
+      height: 58px;
+      border-radius: 8px;
+    }
+
+    /* .info h2 {
+      font-size: 27px;
+    } */
+
+    .info p {
+      font-size: 8px;
+    }
+
+    .precio {
+      min-width: 55px;
+      font-size: 12px;
+    }
+  }
+
+  /* =========================
+       CELULAR PEQUEÑO
+    ========================= */
+
+  @media (max-width: 400px) {
+    .favoritos {
+      padding: 60px 15px;
+    }
+
+    .platillo {
+      gap: 10px;
+    }
+
+    .platillo img {
+      width: 55px;
+      height: 52px;
+    }
+
+    .info h2 {
+      font-size: 21px;
+    }
+
+    .info p {
+      font-size:11px;
+    }
+
+    .precio {
+      min-width: 45px;
+      font-size: 18px;
+    }
+  }
+</style>

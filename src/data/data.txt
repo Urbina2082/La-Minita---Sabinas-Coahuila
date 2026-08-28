@@ -1,0 +1,809 @@
+export const menu = [
+  {
+    categoria: "Entradas",
+    items: [
+      { nombre: "Guacamole", precio: 150 },
+      { nombre: "Panecillo de maíz con camarones", precio: 180 },
+      { nombre: "Rollo hawaiano con camarones", precio: 180 },
+      { nombre: "Ensalada fresca con camarones", precio: 185 },
+      { nombre: "Aros de cebolla", precio: 105 },
+      { nombre: "Alitas con salsa búfalo o BBQ", precio: 160 },
+      { nombre: "Boneless con salsa búfalo o BBQ", precio: 160 },
+      {
+        nombre: "Chilaca rellena de queso Philadelphia, carne y tocino",
+        precio: 170
+      }
+    ]
+  },
+
+  {
+    categoria: "Caldo",
+    items: [
+      {
+        nombre: "Pescado con pieza",
+        precioChico: 90,
+        precioGrande: null
+      },
+      {
+        nombre: "Pescado sin pieza",
+        precioChico: 75,
+        precioGrande: null
+      },
+      {
+        nombre: "Camarón",
+        precioChico: 90,
+        precioGrande: 140
+      },
+      {
+        nombre: "Filete",
+        precioChico: 80,
+        precioGrande: 120
+      },
+      {
+        nombre: "Mixto",
+        precioChico: 80,
+        precioGrande: 180
+      },
+      {
+        nombre: "Sopa de mariscos",
+        precioChico: 30,
+        precioGrande: 200
+      },
+      {
+        nombre: "Vaso camarón",
+        precio: 45
+      },
+      {
+        nombre: "Vaso pescado",
+        precio: 35
+      }
+    ]
+  },
+
+  {
+    categoria: "Cocteles",
+    items: [
+      {
+        nombre: "Camarón",
+        precioChico: 30,
+        precioGrande: 190
+      },
+      {
+        nombre: "Campechana",
+        precioChico: 160,
+        precioGrande: 210
+      },
+      {
+        nombre: "Pulpo",
+        precioChico: 90,
+        precioGrande: 190
+      },
+      {
+        nombre: "Ceviche",
+        precioChico: 70,
+        precioGrande: 100
+      },
+      {
+        nombre: "Platillo empanizado",
+        descripcion: "Arroz blanco, ensalada y papa frita"
+      },
+      {
+        nombre: "Platillo salteado",
+        descripcion: "Verduras a la mantequilla, arroz blanco y papa al horno"
+      }
+    ]
+  },
+
+  {
+    categoria: "Especiales",
+    items: [
+      {
+        nombre: "Fuente caliente",
+        precio: 1200
+      },
+      {
+        nombre: "Filete Minita",
+        precio: 230
+      },
+      {
+        nombre: "Torre de mariscos",
+        precio: 240
+      },
+      {
+        nombre: "Papota 4 quesos con camarón",
+        precio: 300
+      },
+      {
+        nombre: "Camarones aguachile",
+        precio: 260
+      },
+      {
+        nombre: "Brocheta de camarón",
+        precio: 260
+      },
+      {
+        nombre: "Ostiones frescos",
+        precio: 210
+      }
+    ]
+  },
+
+  {
+    categoria: "Tostadas",
+    items: [
+      {
+        nombre: "Ceviche",
+        precio: 70
+      },
+      {
+        nombre: "Camarón",
+        precio: 70
+      },
+      {
+        nombre: "Campechana",
+        precio: 70
+      },
+      {
+        nombre: "Pulpo",
+        precio: 70
+      },
+      {
+        nombre: "Platillo empanizado",
+        descripcion: "Arroz blanco, ensalada y papa frita"
+      },
+      {
+        nombre: "Platillo salteado",
+        descripcion: "Verduras a la mantequilla, arroz blanco y papa al horno"
+      }
+    ]
+  },
+
+  {
+    categoria: "Papas",
+    items: [
+      {
+        nombre: "Orden de papas",
+        precio: 40
+      },
+      {
+        nombre: "Papa nachos",
+        precio: 80
+      },
+      {
+        nombre: "Papa nachos con arrachera",
+        precio: 160
+      },
+      {
+        nombre: "Papa asada con carne",
+        precio: 175,
+        descripcion:
+          "Orden de papas cubiertas con queso cheddar y chile jalapeño"
+      },
+      {
+        nombre: "Papa sencilla",
+        precio: 110,
+        descripcion:
+          "Orden de papas cubiertas con queso cheddar y arrachera"
+      }
+    ]
+  },
+
+  {
+    categoria: "Para los peques",
+    items: [
+      {
+        nombre: "Nuggets con papas",
+        precio: 120
+      },
+      {
+        nombre: "Milanesa de pollo",
+        precio: 140
+      },
+      {
+        nombre: "Hamburguesa",
+        precio: 150
+      }
+    ]
+  },
+
+  {
+    categoria: "Carnes",
+    items: [
+      {
+        nombre: "Tacos de arrachera",
+        precio: 50,
+        descripcion:
+          "4 tacos en harina o maíz con arrachera, cebolla, queso gratinado y guacamole"
+      },
+      {
+        nombre: "Cortadillo",
+        precio: 195
+      },
+      {
+        nombre: "T-Bone",
+        precio: 350
+      },
+      {
+        nombre: "Ribeye",
+        precio: 350
+      },
+      {
+        nombre: "Parrillada de arrachera",
+        precio: 1100,
+        descripcion:
+          "Incluye papas fritas, guacamole, salchicha y quesadillas"
+      }
+    ]
+  },
+
+  {
+    categoria: "Filetes y camarón",
+    items: [
+      {
+        nombre: "Empanizado",
+        precioFilete: 50,
+        precioCamaron: 190
+      },
+      {
+        nombre: "A la mexicana",
+        precioFilete: 170,
+        precioCamaron: 190
+      },
+      {
+        nombre: "A la diabla",
+        precioFilete: 170,
+        precioCamaron: 190
+      },
+      {
+        nombre: "Al mojo de ajo",
+        precioFilete: 170,
+        precioCamaron: 190
+      },
+      {
+        nombre: "Ajillo",
+        precioFilete: 170,
+        precioCamaron: 190
+      },
+      {
+        nombre: "Entomatados",
+        precioFilete: 170,
+        precioCamaron: 190
+      },
+      {
+        nombre: "Metro bato al coco",
+        precioFilete: 170,
+        precioCamaron: 220
+      }
+    ]
+  },
+
+  {
+    categoria: "Pescado",
+    items: [
+      {
+        nombre: "Filete al cilantro",
+        precio: 200
+      },
+      {
+        nombre: "Filete a la veracruzana",
+        precio: 200
+      }
+    ]
+  },
+
+  {
+    categoria: "Pescado frito",
+    items: [
+      {
+        nombre: "Mojarra",
+        precio: 190
+      },
+      {
+        nombre: "Robalo",
+        precio: 190
+      },
+      {
+        nombre: "Bagre",
+        precio: 190
+      }
+    ]
+  }
+];
+
+// Categorías para generar los botones
+export const categorias = menu.map(
+  ({ categoria }) => categoria
+);
+
+
+
+
+---
+import { menu } from "../data/data.js";
+---
+
+<section class="menu">
+
+  <!-- CATEGORÍAS -->
+  <div class="categorias">
+
+    {menu.map((categoria, index) => (
+      <button
+        class:list={{ activo: index === 0 }}
+        class="categoria-btn"
+        data-categoria={categoria.categoria}
+      >
+        {categoria.categoria}
+      </button>
+    ))}
+
+  </div>
+
+
+  <!-- PRODUCTOS -->
+  <div class="productos" id="productos">
+
+    {menu[0].items.map((item) => (
+
+      <article class="producto">
+
+        <h3>{item.nombre}</h3>
+
+        {item.descripcion && (
+          <p>{item.descripcion}</p>
+        )}
+
+        {item.precio && (
+          <strong>
+            ${item.precio}.00
+          </strong>
+        )}
+
+      </article>
+
+    ))}
+
+  </div>
+
+</section>
+
+
+<script define:vars={{ menu }}>
+
+  const botones = document.querySelectorAll(".categoria-btn");
+  const productos = document.querySelector("#productos");
+
+
+  function mostrarCategoria(nombreCategoria) {
+
+    const categoria = menu.find(
+      item => item.categoria === nombreCategoria
+    );
+
+    if (!categoria) return;
+
+
+    productos.innerHTML = categoria.items.map(item => {
+
+      let precio = "";
+
+      if (item.precio) {
+
+        precio = `
+          <strong>
+            $${item.precio}.00
+          </strong>
+        `;
+
+      }
+
+      return `
+        <article class="producto">
+
+          <h3>${item.nombre}</h3>
+
+          ${
+            item.descripcion
+              ? `<p>${item.descripcion}</p>`
+              : ""
+          }
+
+          ${precio}
+
+        </article>
+      `;
+
+    }).join("");
+
+  }
+
+
+  botones.forEach(boton => {
+
+    boton.addEventListener("click", () => {
+
+      botones.forEach(btn =>
+        btn.classList.remove("activo")
+      );
+
+      boton.classList.add("activo");
+
+      mostrarCategoria(
+        boton.dataset.categoria
+      );
+
+    });
+
+  });
+
+</script>
+
+
+// data.js
+
+export const menu = [
+  {
+    id: "entradas",
+    nombre: "Entradas",
+    items: [
+      {
+        nombre: "Guacamole",
+        precio: 150
+      },
+      {
+        nombre: "Panecillo de maíz con camarones",
+        precio: 180
+      },
+      {
+        nombre: "Rollo hawaiano con camarones",
+        precio: 180
+      },
+      {
+        nombre: "Ensalada fresca con camarones",
+        precio: 185
+      },
+      {
+        nombre: "Aros de cebolla",
+        precio: 105
+      },
+      {
+        nombre: "Alitas con salsa búfalo o BBQ",
+        precio: 160
+      },
+      {
+        nombre: "Boneless con salsa búfalo o BBQ",
+        precio: 160
+      },
+      {
+        nombre: "Chilaca rellena de queso Philadelphia, carne y tocino",
+        precio: 70
+      }
+    ]
+  },
+
+  {
+    id: "caldos",
+    nombre: "Caldos",
+    items: [
+      {
+        nombre: "Pescado con pieza",
+        precio: {
+          chico: 90
+        }
+      },
+      {
+        nombre: "Pescado sin pieza",
+        precio: {
+          chico: 75
+        }
+      },
+      {
+        nombre: "Camarón",
+        precio: {
+          chico: 90,
+          grande: 140
+        }
+      },
+      {
+        nombre: "Filete",
+        precio: {
+          chico: 80,
+          grande: 120
+        }
+      },
+      {
+        nombre: "Mixto",
+        precio: {
+          chico: 80,
+          grande: 180
+        }
+      },
+      {
+        nombre: "Sopa de mariscos",
+        precio: {
+          chico: 30,
+          grande: 200
+        }
+      },
+      {
+        nombre: "Vaso camarón",
+        precio: 45
+      },
+      {
+        nombre: "Vaso pescado",
+        precio: 35
+      }
+    ]
+  },
+
+  {
+    id: "cocteles",
+    nombre: "Cocteles",
+    items: [
+      {
+        nombre: "Camarón",
+        precio: {
+          chico: 30,
+          grande: 190
+        }
+      },
+      {
+        nombre: "Campechana",
+        precio: {
+          chico: 160,
+          grande: 210
+        }
+      },
+      {
+        nombre: "Pulpo",
+        precio: {
+          chico: 90,
+          grande: 190
+        }
+      },
+      {
+        nombre: "Ceviche",
+        precio: {
+          chico: 70,
+          grande: 100
+        }
+      }
+    ]
+  },
+
+  {
+    id: "especiales",
+    nombre: "Especiales",
+    items: [
+      {
+        nombre: "Fuente caliente",
+        precio: 1200
+      },
+      {
+        nombre: "Filete Minita",
+        precio: 230
+      },
+      {
+        nombre: "Torre de mariscos",
+        precio: 240
+      },
+      {
+        nombre: "Papota 4 quesos con camarón",
+        precio: 300
+      },
+      {
+        nombre: "Camarones aguachile",
+        precio: 260
+      },
+      {
+        nombre: "Brocheta de camarón",
+        precio: 260
+      },
+      {
+        nombre: "Ostiones frescos",
+        precio: 210
+      }
+    ]
+  },
+
+  {
+    id: "tostadas",
+    nombre: "Tostadas",
+    items: [
+      {
+        nombre: "Ceviche",
+        precio: 70
+      },
+      {
+        nombre: "Camarón",
+        precio: 70
+      },
+      {
+        nombre: "Campechana",
+        precio: 70
+      },
+      {
+        nombre: "Pulpo",
+        precio: 70
+      }
+    ]
+  },
+
+  {
+    id: "papas",
+    nombre: "Papas",
+    items: [
+      {
+        nombre: "Orden de papas",
+        precio: 40
+      },
+      {
+        nombre: "Papa nachos",
+        precio: 80
+      },
+      {
+        nombre: "Papa nachos con arrachera",
+        precio: 160
+      },
+      {
+        nombre: "Papa asada con carne",
+        precio: 175,
+        descripcion:
+          "Orden de papas cubiertas con queso cheddar y chile jalapeño"
+      },
+      {
+        nombre: "Papa sencilla",
+        precio: 110,
+        descripcion:
+          "Orden de papas cubiertas con queso cheddar y arrachera"
+      }
+    ]
+  },
+
+  {
+    id: "peques",
+    nombre: "Para los peques",
+    items: [
+      {
+        nombre: "Nuggets con papas",
+        precio: 120
+      },
+      {
+        nombre: "Milanesa de pollo",
+        precio: 140
+      },
+      {
+        nombre: "Hamburguesa",
+        precio: 150
+      }
+    ]
+  },
+
+  {
+    id: "carnes",
+    nombre: "Carnes",
+    items: [
+      {
+        nombre: "Tacos de arrachera",
+        precio: 50,
+        descripcion:
+          "4 tacos en harina o maíz con arrachera, cebolla, queso gratinado y guacamole"
+      },
+      {
+        nombre: "Cortadillo",
+        precio: 195
+      },
+      {
+        nombre: "T-Bone",
+        precio: 350
+      },
+      {
+        nombre: "Ribeye",
+        precio: 350
+      },
+      {
+        nombre: "Parrillada de arrachera",
+        precio: 1100,
+        descripcion:
+          "Incluye papas fritas, guacamole, salchicha y quesadillas"
+      }
+    ]
+  },
+
+  {
+    id: "filetes-camaron",
+    nombre: "Filetes y camarón",
+    items: [
+      {
+        nombre: "Empanizado",
+        precio: {
+          filete: 50,
+          camaron: 190
+        }
+      },
+      {
+        nombre: "A la mexicana",
+        precio: {
+          filete: 170,
+          camaron: 190
+        }
+      },
+      {
+        nombre: "A la diabla",
+        precio: {
+          filete: 170,
+          camaron: 190
+        }
+      },
+      {
+        nombre: "Al mojo de ajo",
+        precio: {
+          filete: 170,
+          camaron: 190
+        }
+      },
+      {
+        nombre: "Ajillo",
+        precio: {
+          filete: 170,
+          camaron: 190
+        }
+      },
+      {
+        nombre: "Entomatados",
+        precio: {
+          filete: 170,
+          camaron: 190
+        }
+      },
+      {
+        nombre: "Metro bato al coco",
+        precio: {
+          filete: 170,
+          camaron: 220
+        }
+      }
+    ]
+  },
+
+  {
+    id: "pescado",
+    nombre: "Pescado",
+    items: [
+      {
+        nombre: "Filete al cilantro",
+        precio: 200
+      },
+      {
+        nombre: "Filete a la veracruzana",
+        precio: 200
+      }
+    ]
+  },
+
+  {
+    id: "pescado-frito",
+    nombre: "Pescado frito",
+    items: [
+      {
+        nombre: "Mojarra",
+        precio: 190
+      },
+      {
+        nombre: "Robalo",
+        precio: 190
+      },
+      {
+        nombre: "Bagre",
+        precio: 190
+      }
+    ]
+  }
+];
+
+
+// Solo las categorías para crear los botones
+export const categorias = menu.map(categoria => ({
+  id: categoria.id,
+  nombre: categoria.nombre
+}));

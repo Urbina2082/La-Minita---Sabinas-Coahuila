@@ -1,0 +1,188 @@
+<section class="galeria" id="galeria">
+  <div class="encabezado">
+    <span>07</span>
+    <i></i>
+    <small>GALERÍA</small>
+  </div>
+
+  <h2>MOMENTOS</h2>
+
+  <div class="fotos">
+    <div class="foto alta">
+      <img src="./Gall/4.avif" alt="La Minita" />
+    </div>
+
+    <div class="foto">
+      <img src="./Gall/2.avif" alt="La Minita" />
+    </div>
+
+    <div class="foto">
+      <img src="./Gall/3.avif" alt="La Minita" />
+    </div>
+
+    <div class="foto">
+      <img src="./Gall/1.avif" alt="La Minita" />
+    </div>
+
+    <div class="foto alta">
+      <img src="./Gall/5.avif" alt="La Minita" />
+    </div>
+
+    <div class="foto">
+      <img src="./Gall/6.avif" alt="La Minita" />
+    </div>
+
+    <div class="foto">
+      <img src="./Gall/7.avif" alt="La Minita" />
+    </div>
+
+    <div class="foto">
+      <img src="./Gall/8.avif" alt="La Minita" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .galeria {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px;
+  }
+
+  /* ENCABEZADO */
+
+  .encabezado {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .encabezado span {
+    color: #b5965e;
+
+    font-size: 12px;
+  }
+
+  .encabezado i {
+    width: 25px;
+    height: 1px;
+
+    background: #333;
+  }
+
+  .encabezado small {
+    color: #777;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  /* TITULO */
+
+  h2 {
+    margin: 0 0 30px;
+
+    color: #eee;
+
+    font-family: Georgia, serif;
+
+    font-size: 44px;
+    font-weight: normal;
+  }
+
+  /* GALERÍA */
+
+  .fotos {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-auto-rows: 190px;
+
+    gap: 8px;
+  }
+
+  /* FOTOS */
+
+  .foto {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 9px;
+  }
+
+  .foto img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform 0.5s;
+  }
+
+  .foto:hover img {
+    transform: scale(1.05);
+  }
+
+  /* FOTOS ALTAS */
+
+  .foto.alta {
+    grid-row: span 2;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 800px) {
+    .galeria {
+      padding: 80px 30px;
+    }
+
+    .fotos {
+      grid-template-columns: repeat(3, 1fr);
+
+      grid-auto-rows: 170px;
+    }
+  }
+
+  /* CELULAR */
+
+  @media (max-width: 600px) {
+    .galeria {
+      padding: 70px 20px;
+    }
+
+    h2 {
+     font-size: 40px;
+    }
+
+    .fotos {
+      grid-template-columns: repeat(2, 1fr);
+
+      grid-auto-rows: 160px;
+
+      gap: 7px;
+    }
+  }
+
+  /* CELULAR PEQUEÑO */
+
+  @media (max-width: 400px) {
+    .galeria {
+      padding: 60px 15px;
+    }
+
+    .fotos {
+      grid-auto-rows: 140px;
+    }
+  }
+</style>

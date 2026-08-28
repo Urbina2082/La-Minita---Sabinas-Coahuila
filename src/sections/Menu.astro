@@ -1,0 +1,598 @@
+---
+import { MenuData } from "../data/menu.js";
+
+function formatPrecio(precio) {
+    if (typeof precio === "number") {
+        return `$${precio}`;
+    }
+
+    if (precio && typeof precio === "object") {
+        return Object.entries(precio)
+            .map(([tipo, valor]) => `${tipo.toUpperCase()}: $${valor}`)
+            .join(" / ");
+    }
+
+    return "";
+}
+---
+
+<section class="menu" id="menu">
+
+    <div class="encabezado">
+        <span>04</span>
+        <i></i>
+        <small>EL MENÚ</small>
+    </div>
+
+    <h1>EL MENÚ</h1>
+
+    <p class="intro">
+        De la parrilla al mar. Del primer trago al último.
+    </p>
+
+
+    <!-- CATEGORÍAS -->
+
+    <div class="categorias">
+
+        {MenuData.map((categoria, index) => (
+
+            <button
+                type="button"
+                class={index === 0 ? "activo" : ""}
+                data-categoria={categoria.id}
+            >
+                {categoria.nombre}
+            </button>
+
+        ))}
+
+    </div>
+
+
+    <!-- MENÚ -->
+
+    <div class="menu-contenido">
+
+        {MenuData.map((categoria, index) => (
+
+            <div
+                id={categoria.id}
+                class={`categoria ${index !== 0 ? "oculto" : ""}`}
+            >
+
+                <p class="subtitulo">
+                    {categoria.subtitulo}
+                </p>
+
+                <div class="titulo-categoria">
+                    <h2>{categoria.nombre}</h2>
+                    <span></span>
+                </div>
+
+
+                <div class="platillos">
+
+                    {categoria.items.map((item) => (
+
+                        <article
+                            class={`platillo ${
+                                item.descripcion || item.especialidad
+                                    ? "especial"
+                                    : ""
+                            }`}
+                        >
+
+                            <div class="nombre-precio">
+
+                                <h3>
+                                    {item.nombre}
+                                </h3>
+
+                                <strong>
+                                    {formatPrecio(item.precio)}
+                                </strong>
+
+                            </div>
+
+
+                            {item.descripcion && (
+
+                                <p class="descripcion">
+                                    {item.descripcion}
+                                </p>
+
+                            )}
+
+
+                            {item.especialidad && (
+
+                                <small class="especialidad">
+                                    ESPECIALIDAD
+                                </small>
+
+                            )}
+
+                        </article>
+
+                    ))}
+
+                </div>
+
+            </div>
+
+        ))}
+
+    </div>
+
+</section>
+
+<script>
+
+    const botones = document.querySelectorAll("[data-categoria]");
+    const categorias = document.querySelectorAll(".categoria");
+
+    botones.forEach((boton) => {
+
+        boton.addEventListener("click", () => {
+
+            const id = boton.dataset.categoria;
+
+            // Ocultar todas
+            categorias.forEach((categoria) => {
+                categoria.classList.add("oculto");
+            });
+
+            // Mostrar seleccionada
+            document
+                .getElementById(id)
+                ?.classList.remove("oculto");
+
+
+            // Cambiar botón activo
+            botones.forEach((btn) => {
+                btn.classList.remove("activo");
+            });
+
+            boton.classList.add("activo");
+
+        });
+
+    });
+
+</script>
+
+
+<style>
+
+
+/* =========================
+   MENU PRINCIPAL
+========================= */
+
+.menu {
+    width: 100%;
+    max-width: 1200px;
+ƒ
+    margin: 0 auto;
+    padding: 100px 40px;
+
+    color: #eee;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   ENCABEZADO
+========================= */
+
+.encabezado {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+}
+
+.encabezado span {
+    color: #b5965e;
+
+    font-size: 12px;
+}
+
+.encabezado i {
+    width: 30px;
+    height: 1px;
+
+    background: #333;
+
+    display: block;
+}
+
+.encabezado small {
+    color: #777;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   TITULO PRINCIPAL
+========================= */
+
+.menu > h1 {
+    margin: 0;
+
+    color: #eee;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 59px;
+    font-weight: normal;
+
+    line-height: 1;
+}
+
+.intro {
+    margin: 12px 0 40px;
+
+    color: #777;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   BOTONES DE CATEGORIAS
+========================= */
+
+.categorias {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    width: 100%;
+
+    margin-bottom: 45px;
+    padding-bottom: 15px;
+
+    overflow-x: auto;
+
+    border-bottom: 1px solid #222;
+
+    scrollbar-width: none;
+
+    box-sizing: border-box;
+}
+
+.categorias::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* BOTON */
+
+.categorias button {
+    flex-shrink: 0;
+
+    padding: 10px 17px;
+
+    background: transparent;
+
+    color: #777;
+
+    border: 1px solid transparent;
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    font-family: inherit;
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+
+    transition:
+        color .25s ease,
+        border-color .25s ease,
+        background .25s ease;
+}
+
+
+/* HOVER */
+
+.categorias button:hover {
+    color: #ddd;
+}
+
+
+/* BOTON ACTIVO */
+
+.categorias button.activo {
+    color: #eee;
+
+    background: #141414;
+
+    border-color: #333;
+}
+
+
+/* =========================
+   CATEGORIA
+========================= */
+
+.categoria {
+    width: 100%;
+}
+
+
+/* OCULTAR CATEGORIAS */
+
+.oculto {
+    display: none;
+}
+
+
+/* =========================
+   SUBTITULO
+========================= */
+
+.subtitulo {
+    margin: 0 0 20px;
+
+    color: #777;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================
+   TITULO DE CATEGORIA
+========================= */
+
+.titulo-categoria {
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 25px;
+}
+
+.titulo-categoria h2 {
+    flex-shrink: 0;
+
+    margin: 0;
+
+    color: #aaa;
+
+    font-size: 10px;
+
+    font-weight: normal;
+
+    letter-spacing: 3px;
+}
+
+.titulo-categoria span {
+    width: 100%;
+    height: 1px;
+
+    background: #222;
+}
+
+
+/* =========================
+   LISTA DE PLATILLOS
+========================= */
+
+.platillos {
+    display: grid;
+
+   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    column-gap: 50px;
+
+    width: 100%;
+}
+
+
+/* =========================
+   PLATILLO
+========================= */
+
+.platillo {
+    width: 100%;
+
+    padding: 20px 0;
+
+    border-bottom: 1px solid #222;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   NOMBRE + PRECIO
+========================= */
+
+.nombre-precio {
+    display: flex;
+    align-items: baseline;
+
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.nombre-precio h3 {
+    margin: 0;
+
+    color: #e5e5e5;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    line-height: 1.2;
+}
+
+.nombre-precio strong {
+    flex-shrink: 0;
+
+    color: #c5a66c;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 14px;
+
+    font-weight: normal;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   DESCRIPCION
+========================= */
+
+.descripcion {
+    max-width: 500px;
+
+    margin: 8px 0 0;
+
+    color: #777;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   ESPECIALIDAD
+========================= */
+
+.platillo.especial {
+    padding: 20px;
+
+    background: #101010;
+
+    border: 1px solid #222;
+
+    border-radius: 10px;
+
+    margin-bottom: 10px;
+}
+
+.especialidad {
+    display: block;
+
+    margin-top: 12px;
+
+    color: #a88c57;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+}
+
+
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .menu {
+        padding: 65px 20px;
+    }
+
+
+    /* TITULO */
+
+    .menu > h1 {
+        font-size: 44px;
+    }
+
+    .intro {
+        margin-bottom: 30px;
+
+        font-size: 14px;
+    }
+
+
+    /* CATEGORIAS */
+
+    .categorias {
+        gap: 5px;
+
+        margin-bottom: 35px;
+    }
+
+    .categorias button {
+        padding: 9px 13px;
+
+        font-size: 11px;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    /* CATEGORIA */
+
+    .titulo-categoria {
+        gap: 10px;
+    }
+
+    .titulo-categoria h2 {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+
+    /* PLATILLOS */
+
+    .platillo {
+        padding: 17px 0;
+    }
+
+
+    .nombre-precio {
+        gap: 10px;
+    }
+
+    .nombre-precio h3 {
+        font-size: 18px;
+    }
+
+    .nombre-precio strong {
+        font-size: 16px;
+    }
+
+
+    /* DESCRIPCION */
+
+    .descripcion {
+        font-size: 12px;
+    }
+
+}
+
+
+</style>

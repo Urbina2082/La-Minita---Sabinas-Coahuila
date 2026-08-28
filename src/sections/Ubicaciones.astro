@@ -1,0 +1,369 @@
+<section class="ubicaciones" id="ubicaciones">
+  <div class="encabezado">
+    <span>08</span>
+    <i></i>
+    <small>UBICACIONES</small>
+  </div>
+
+  <div class="contenido">
+    <div class="informacion">
+      <h2>ENCUÉNTRANOS</h2>
+
+      <div class="tarjeta">
+        <div class="icono">⌁</div>
+
+        <h3>LA MINITA 1</h3>
+
+        <p>
+          Independencia 902 nte<br /> col.centenario
+          <br />
+          Sabinas, Coahuila.
+        </p>
+
+        <div class="datos">
+          <div>
+            <small>HORARIO</small>
+            <span>12:00pm - 12:00am</span>
+          </div>
+
+          <div>
+            <small>Miércoles a Lunes</small>
+            <span>Martes cerrado</span>
+          </div>
+
+          <div>
+            <small>TELÉFONO</small>
+            <span>861 113 0688</span>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/ntFNUdctxNxRTwYZ7" class="mapa">
+          ABRIR MAPA
+          <i></i>
+        </a>
+      </div>
+      <div class="tarjeta">
+        <div class="icono">⌁</div>
+
+        <h3>LA MINITA 2</h3>
+
+        <p>
+          Francisco I. Madero 115, <br />
+          Zona Centro<br />
+          Sabinas, Coahuila.
+        </p>
+
+        <div class="datos">
+          <div>
+            <small>HORARIO</small>
+            <span>12:00pm - 12:00am</span>
+          </div>
+
+          <div>
+            <small>Miércoles a Lunes</small>
+            <span>Martes cerrado</span>
+          </div>
+
+          <div>
+            <small>TELÉFONO</small>
+            <span>861 113 0688</span>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/e8qrNTqo15euemRz5" class="mapa">
+          ABRIR MAPA
+          <i></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="mapa-contenedor">
+      <iframe
+        src="https://www.google.com/maps?q=La+minita+restaurant+bar+Sabinas+Coahuila&output=embed"
+        width="100%"
+        height="350"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      >
+      </iframe>
+      <iframe
+        src="https://www.google.com/maps?q=La+minita+restaurant+bar+Sabinas+Coahuila&output=embed"
+        width="100%"
+        height="200"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        title="Ubicación de La Minita"></iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ubicaciones {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px;
+  }
+
+  /* ENCABEZADO */
+
+  .encabezado {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+  }
+
+  .encabezado span {
+    color: #b5965e;
+    font-size: 12px;
+  }
+
+  .encabezado i {
+    width: 25px;
+    height: 1px;
+
+    background: #333;
+  }
+
+  .encabezado small {
+    color: #777;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  /* CONTENIDO */
+
+  .contenido {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+  }
+
+  /* INFORMACIÓN */
+
+  .informacion h2 {
+    margin: 0 0 35px;
+
+    color: #eee;
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+    font-weight: normal;
+  }
+
+  /* TARJETA */
+
+  .tarjeta {
+    position: relative;
+
+    padding: 25px 18px;
+
+    border: 1px solid #222;
+
+    border-radius: 16px;
+
+    background: rgba(0, 0, 0, 0.35);
+    margin: 25px 0px;
+  }
+
+  .icono {
+    position: absolute;
+
+    right: 20px;
+    top: 20px;
+
+    color: #b5965e;
+
+    font-size: 18px;
+  }
+
+  .tarjeta h3 {
+    margin: 0 0 15px;
+
+    color: #ddd;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+    font-weight: normal;
+  }
+
+  .tarjeta > p {
+    margin: 0 0 25px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+  /* DATOS */
+
+  .datos {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+
+    padding-top: 18px;
+
+    border-top: 1px solid #222;
+  }
+
+  .datos div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+  }
+
+  .datos small {
+    color: hsl(39, 37%, 54%);
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+  }
+
+  .datos span {
+    color: #666;
+
+    font-size: 12px;
+  }
+
+  /* ABRIR MAPA */
+
+  .mapa {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-top: 25px;
+
+    color: #b5965e;
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+  }
+
+  .mapa i {
+    width: 22px;
+    height: 1px;
+
+    background: #b5965e;
+  }
+
+  /* MAPA */
+
+  .mapa-contenedor {
+    width: 100%;
+    height: 315px;
+
+    overflow: hidden;
+
+    border: 1px solid #222;
+
+    border-radius: 16px;
+  }
+
+  .mapa-contenedor iframe {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
+
+    filter: grayscale(1) brightness(0.65);
+  }
+
+  /* TABLET */
+
+  @media (max-width: 800px) {
+    .ubicaciones {
+      padding: 80px 30px;
+      width: auto;
+    }
+
+    .contenido {
+      gap: 20px;
+    }
+
+    .informacion h2 {
+      font-size: 32px;
+    }
+
+    .mapa-contenedor {
+      height: 300px;
+    }
+  }
+
+  /* CELULAR */
+
+  @media (max-width: 600px) {
+    .ubicaciones {
+      padding: 70px 20px;
+    }
+
+    .contenido {
+      grid-template-columns: 1fr;
+
+      gap: 30px;
+    }
+
+    .informacion h2 {
+     
+
+      margin-bottom: 25px;
+    }
+
+    .tarjeta {
+      padding: 22px 16px;
+    }
+
+    .mapa-contenedor {
+      height: 280px;
+    }
+  }
+
+  /* CELULAR PEQUEÑO */
+
+  @media (max-width: 400px) {
+    .ubicaciones {
+      padding: 60px 15px;
+    }
+
+    /* .informacion h2 {
+      font-size: 28px;
+    } */
+
+    .datos {
+      grid-template-columns: 1fr;
+
+      gap: 15px;
+    }
+
+    .mapa-contenedor {
+      height: 240px;
+    }
+  }
+</style>

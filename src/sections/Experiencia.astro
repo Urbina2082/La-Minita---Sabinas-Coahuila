@@ -1,0 +1,241 @@
+<section class="experiencia" id="experiencia">
+  <div class="encabezado">
+    <div class="titulo">
+      <div class="numero">
+        <span>01</span>
+        <i></i>
+        <small>LA EXPERIENCIA</small>
+      </div>
+
+      <h2>
+        NO SOLO VIENES<br />
+        <strong>A COMER.</strong>
+      </h2>
+    </div>
+
+    <p>
+      Vienes por el ambiente, por los sabores, por la cerveza fría, por los
+      amigos y por esas noches que terminan convirtiéndose en historias.
+    </p>
+  </div>
+
+  <div class="galeria">
+    <div class="imagen grande">
+      <img src="/fo1.avif" alt="La Minita" />
+
+      <span>NIGHT</span>
+    </div>
+
+    <div class="columna">
+      <div class="imagen">
+        <img src="/fot2.avif" alt="Bar La Minita" />
+
+        <span>BAR</span>
+      </div>
+
+      <div class="imagen">
+        <img src="/fot3.avif" alt="Música en La Minita" />
+
+        <span>MUSIC</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .experiencia {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+    padding: 100px 40px;
+  }
+
+  /* ENCABEZADO */
+
+  .encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 65px;
+  }
+
+  .titulo {
+    width: 55%;
+  }
+
+  .numero {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 25px;
+  }
+
+  .numero span {
+    color: #b5965e;
+    font-size: 11px;
+  }
+
+  .numero i {
+    width: 20px;
+    height: 1px;
+
+    background: #333;
+  }
+
+  .numero small {
+    color: #777;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  h2 {
+    margin: 0;
+
+    color: #eee;
+
+    font-family: Georgia, serif;
+    font-size: 45px;
+    font-weight: normal;
+    line-height: 1;
+  }
+
+  h2 strong {
+    color: #c9aa70;
+    font-weight: normal;
+  }
+
+  .encabezado > p {
+    width: 32%;
+
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.7;
+
+    margin-top: 50px;
+  }
+
+  /* GALERÍA */
+
+  .galeria {
+    display: grid;
+
+    grid-template-columns: 1.6fr 1fr;
+
+    gap: 10px;
+  }
+
+  .columna {
+    display: grid;
+
+    grid-template-rows: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  /* IMÁGENES */
+
+  .imagen {
+    position: relative;
+
+    overflow: hidden;
+  }
+
+  .imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s;
+  }
+
+  .imagen:hover img {
+    transform: scale(1.04);
+  }
+
+  /* ETIQUETAS */
+
+  .imagen span {
+    position: absolute;
+
+    bottom: 12px;
+    left: 12px;
+
+    padding: 4px 9px;
+
+    border: 1px solid #55452e;
+    border-radius: 20px;
+
+    color: #b59a68;
+    background: #000000a4;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 800px) {
+    .experiencia {
+      padding: 80px 25px;
+    }
+
+    .encabezado {
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    .titulo {
+      width: 100%;
+    }
+
+    .encabezado > p {
+      width: 100%;
+      margin-top: 0;
+      max-width: 500px;
+    }
+    .imagen {
+      width: auto;
+    }
+    .galeria {
+      height: 450px;
+    }
+  }
+
+  /* CELULAR */
+
+  @media (max-width: 600px) {
+    .experiencia {
+      padding: 70px 20px;
+      width: auto;
+    }
+
+    h2 {
+      font-size: 34px;
+    }
+
+    .galeria {
+      display: flex;
+      flex-direction: column;
+
+      height: auto;
+    }
+
+    .columna {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      gap: 10px;
+    }
+
+    .imagen {
+      width: auto;
+    }
+  }
+</style>

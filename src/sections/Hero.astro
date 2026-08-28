@@ -1,0 +1,395 @@
+<header class="navbar">
+  <a href="/" class="logo">
+    <img
+      src="/logo.avif"
+      alt="La Minita"
+      style="background: #ffffff; border-radius: 50%; width:35px;"
+    />
+    <strong>LA MINITA</strong>
+  </a>
+
+  <nav>
+    <a href="#inicio">LA MINITA</a>
+    <a href="#experiencia">EXPERIENCIA</a>
+    <a href="#menu">MENÚ</a>
+    <a href="#galeria">GALERÍA</a>
+    <a href="#ubicaciones">UBICACIONES</a>
+    <a href="#karaoke">KARAOKE</a>
+  </nav>
+
+  <a href="#menu" class="menu-btn"> VER MENÚ </a>
+</header>
+
+<section class="hero" id="inicio">
+  <div class="contenido">
+    <p class="subtitulo">RESTAURANT · BAR · SABINAS</p>
+
+    <h1>
+      <span>LA</span>
+      <strong>MINITA</strong>
+    </h1>
+
+    <p class="categoria">RESTAURANT BAR</p>
+
+    <p class="descripcion">Comida, tragos y noches que merecen repetirse.</p>
+
+    <div class="botones">
+      <a href="#menu" class="btn-principal"> EXPLORAR MENÚ </a>
+
+      <a href="#ubicaciones" class="btn-secundario"> VER UBICACIONES </a>
+    </div>
+  </div>
+
+  <div class="scroll">SCROLL TO EXPLORE</div>
+</section>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px 12%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    z-index: 10;
+  }
+
+  /* LOGO */
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    color: white;
+    text-decoration: none;
+  }
+
+  .logo span {
+    width: 32px;
+    height: 32px;
+
+    border: 1px solid #8d7650;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 9px;
+  }
+
+  .logo strong {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+    font-weight: normal;
+
+    letter-spacing: 4px;
+  }
+
+  /* MENU */
+
+  nav {
+    display: flex;
+    gap: 28px;
+  }
+
+  nav a {
+    color: #999;
+
+    text-decoration: none;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    color: #c9aa70;
+  }
+
+  /* BOTON MENU */
+
+  .menu-btn {
+    color: #c9aa70;
+
+    text-decoration: none;
+
+    border: 1px solid #4d4029;
+    border-radius: 30px;
+
+    padding: 10px 18px;
+
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  /* HERO */
+
+  .hero {
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 12% 80px;
+    background-image:
+      linear-gradient(to top, #00000083, #000000a5), url(/fondo.avif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* CONTENIDO */
+
+  .contenido {
+    max-width: 700px;
+  }
+
+  .subtitulo {
+    color: #a58a5b;
+
+    font-size: 9px;
+    letter-spacing: 3px;
+
+    margin-bottom: 30px;
+  }
+
+  /* TITULO */
+
+  h1 {
+    margin: 0 0 45px;
+
+    font-family: Georgia, serif;
+
+    font-size: 130px;
+    font-weight: normal;
+
+    line-height: 0.9;
+  }
+
+  h1 span {
+    display: block;
+    color: #eee;
+  }
+
+  h1 strong {
+    display: block;
+
+    margin-left: 120px;
+
+    color: #c9aa70;
+
+    font-weight: normal;
+  }
+
+  /* TEXTO */
+
+  .categoria {
+    color: #aaa;
+
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+  }
+
+  .descripcion {
+    color: #999;
+
+    font-size: 18px;
+
+    margin-bottom: 28px;
+  }
+
+  /* BOTONES */
+
+  .botones {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .btn-principal {
+    color: #c9aa70;
+
+    border: 1px solid #4d4029;
+    border-radius: 30px;
+
+    padding: 13px 24px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .btn-secundario {
+    color: #aaa;
+
+    text-decoration: none;
+    padding: 13px 18px;
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  /* SCROLL */
+
+  .scroll {
+    position: absolute;
+
+    right: 25px;
+    top: 50%;
+
+    writing-mode: vertical-rl;
+
+    color: #777;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  /* =========================
+       TABLET
+    ========================= */
+
+  @media (max-width: 1000px) {
+    .navbar {
+      padding: 20px 6%;
+    }
+
+    .hero {
+      padding-left: 6%;
+      padding-right: 6%;
+    }
+
+    nav {
+      gap: 15px;
+    }
+
+    nav a {
+      font-size: 8px;
+    }
+
+    h1 {
+      font-size: 90px;
+    }
+
+    h1 strong {
+      margin-left: 80px;
+    }
+  }
+
+  /* =========================
+       CELULAR
+    ========================= */
+
+  @media (max-width: 700px) {
+    .navbar {
+      padding: 20px;
+    }
+
+    /* Ocultar navegación */
+
+    nav {
+      display: none;
+    }
+
+    /* Logo */
+
+    .logo strong {
+      font-size: 11px;
+      letter-spacing: 3px;
+    }
+
+    /* Botón */
+
+    .menu-btn {
+      padding: 9px 14px;
+      font-size: 8px;
+    }
+
+    /* Hero */
+
+    .hero {
+      min-height: 90vh;
+
+      padding: 140px 25px 60px;
+
+      align-items: center;
+      background-image:
+        linear-gradient(to top, #00000083, #000000a5), url(/fondo-mov.avif);
+      background-position: center;
+    }
+
+    .contenido {
+      width: 100%;
+    }
+
+    .subtitulo {
+      font-size: 8px;
+      letter-spacing: 2px;
+
+      margin-bottom: 25px;
+    }
+
+    /* Titulo */
+
+    h1 {
+      font-size: 65px;
+
+      margin-bottom: 40px;
+    }
+
+    h1 strong {
+      margin-left: 40px;
+    }
+
+    /* Texto */
+
+    .categoria {
+      font-size: 8px;
+    }
+
+    .descripcion {
+      font-size: 14px;
+
+      line-height: 1.6;
+
+      max-width: 300px;
+    }
+
+    /* Botones */
+
+    .botones {
+      flex-direction: column;
+      align-items: flex-start;
+
+      gap: 18px;
+    }
+
+    .btn-principal {
+      padding: 12px 20px;
+    }
+
+    /* Quitar scroll */
+
+    .scroll {
+      display: none;
+    }
+  }
+</style>

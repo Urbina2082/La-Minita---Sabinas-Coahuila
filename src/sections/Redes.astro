@@ -1,0 +1,236 @@
+<section class="redes" id="redes">
+
+    <div class="encabezado">
+        <span>09</span>
+        <i></i>
+        <small>REDES</small>
+    </div>
+
+
+    <div class="contenido">
+
+        <div>
+            <h2>SÍGUENOS</h2>
+
+            <p>
+                Las mejores noches también viven aquí.
+            </p>
+        </div>
+
+
+        <div class="links">
+
+            <!-- <a href="#" target="_blank">
+                INSTAGRAM
+            </a> -->
+
+            <a href="https://www.facebook.com/profile.php?id=100089642508379&locale=es_LA" target="_blank">
+                FACEBOOK
+            </a>
+
+            <a href="https://www.tiktok.com/@la_minita2023?is_from_webapp=1&sender_device=pc" target="_blank">
+                TIKTOK
+            </a>
+
+            <a href="https://wa.me/528611130688?text=Hola,%20me%20gustaría%20ver%20el%20menú%20y%20hacer%20un%20pedido" target="_blank">
+                WHATSAPP
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<style>
+
+    .redes {
+        width: 100%;
+        max-width: 1100px;
+
+        margin: 0 auto;
+
+        padding: 90px 40px;
+    }
+
+
+    /* ENCABEZADO */
+
+    .encabezado {
+        display: flex;
+        align-items: center;
+
+        gap: 12px;
+
+        margin-bottom: 25px;
+    }
+
+    .encabezado span {
+        color: #b5965e;
+
+        font-size: 12px;
+    }
+
+    .encabezado i {
+        width: 25px;
+        height: 1px;
+
+        background: #333;
+    }
+
+    .encabezado small {
+        color: #777;
+
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+
+    /* CONTENIDO */
+
+    .contenido {
+        display: flex;
+
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 40px;
+    }
+
+
+    /* TITULO */
+
+    h2 {
+        margin: 0 0 10px;
+
+        color: #eee;
+
+        font-family: Georgia, serif;
+
+        font-size: 40px;
+        font-weight: normal;
+    }
+
+    .contenido p {
+        margin: 0;
+
+        color: #777;
+
+        font-size: 12px;
+    }
+
+
+    /* LINKS */
+
+    .links {
+        display: flex;
+
+        align-items: center;
+
+        gap: 10px;
+    }
+
+    .links a {
+        padding: 10px 17px;
+
+        color: #777;
+
+        border: 1px solid #222;
+
+        border-radius: 25px;
+
+        text-decoration: none;
+
+        font-size: 8px;
+        letter-spacing: 3px;
+
+        transition: .3s;
+    }
+
+    .links a:hover {
+        color: #c9aa70;
+
+        border-color: #4d4029;
+    }
+
+
+    /* TABLET */
+
+    @media (max-width: 800px) {
+
+        .redes {
+            padding: 80px 30px;
+        }
+
+        .contenido {
+            gap: 25px;
+        }
+
+        .links {
+            flex-wrap: wrap;
+
+            justify-content: flex-end;
+        }
+
+    }
+
+
+    /* CELULAR */
+
+    @media (max-width: 600px) {
+
+        .redes {
+            padding: 70px 20px;
+        }
+
+        .contenido {
+            flex-direction: column;
+
+            align-items: flex-start;
+
+            gap: 25px;
+        }
+
+        h2 {
+            font-size: 38px;
+        }
+
+        .links {
+            width: 100%;
+
+            justify-content: flex-start;
+        }
+
+        .links a {
+            padding: 9px 14px;
+
+            font-size: 10px;
+        }
+
+    }
+
+
+    /* CELULAR PEQUEÑO */
+
+    /* @media (max-width: 400px) {
+
+        .redes {
+            padding: 60px 15px;
+        }
+
+       
+
+        .links {
+            gap: 7px;
+        }
+
+        .links a {
+            padding: 8px 11px;
+
+            letter-spacing: 2px;
+        }
+
+    } */
+
+</style>

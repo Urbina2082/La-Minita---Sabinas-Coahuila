@@ -1,0 +1,316 @@
+<section class="promociones" id="promociones">
+  <div class="encabezado">
+    <span>05</span>
+    <i></i>
+    <small>HOY SE ANTOJA</small>
+  </div>
+
+  <h2>HOY SE ANTOJA</h2>
+
+  <div class="promos">
+    <!-- PROMOCIÓN 1 -->
+    <article class="promo grande">
+      <img src="/hamburguesa.avif" alt="Miércoles de hamburguesa" />
+
+      <div class="contenido">
+        <small>PROMOCIÓN 01 · EVERY WEDNESDAY</small>
+
+        <h3>
+          MIÉRCOLES DE<br />
+          HAMBURGUESA
+        </h3>
+
+        <p>Hamburguesa + papas con queso.</p>
+      </div>
+    </article>
+
+    <!-- PROMOCIÓN 3 -->
+    <article class="promo pequena">
+      <img src="/camaron.avif" alt="Combo caldo de camarón" />
+
+      <div class="contenido">
+        <small>PROMOCIÓN 03</small>
+
+        <h3>
+          COMBO CALDO DE<br />
+          CAMARÓN
+        </h3>
+
+        <p>Caldo de camarón + tostada campechana.</p>
+
+        <strong>$150</strong>
+      </div>
+    </article>
+
+    <!-- PROMOCIÓN 2 -->
+    <article class="promo horizontal">
+      <img src="/filete.avif" alt="Combo bagre frito" />
+
+      <div class="contenido">
+        <small>PROMOCIÓN 02</small>
+
+        <h3>
+          COMBO FILETE<br />
+          EMPANIZADO
+        </h3>
+
+        <p>
+          1/2 Filete empanizado + Tostada de ceviche + Vaso de Caldo de Camaron.
+        </p>
+
+        <strong>$160</strong>
+      </div>
+    </article>
+  </div>
+</section>
+
+<style>
+  .promociones {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 100px 40px;
+  }
+
+  /* ENCABEZADO */
+
+  .encabezado {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin-bottom: 20px;
+  }
+
+  .encabezado span {
+    color: #b5965e;
+
+    font-size: 12px;
+  }
+
+  .encabezado i {
+    width: 25px;
+    height: 1px;
+
+    background: #333;
+  }
+
+  .encabezado small {
+    color: #777;
+
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  /* TITULO */
+
+  .promociones > h2 {
+    margin: 0 0 35px;
+
+    color: #eee;
+
+    font-family: Georgia, serif;
+
+    font-size: 40px;
+    font-weight: normal;
+  }
+
+  /* GRID */
+
+  .promos {
+    display: grid;
+
+    grid-template-columns: 2fr 1.2fr;
+
+    grid-template-rows: 270px 190px;
+
+    gap: 10px;
+  }
+
+  /* PROMOCIONES */
+
+  .promo {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 14px;
+  }
+
+  .promo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s;
+  }
+
+  .promo:hover img {
+    transform: scale(1.04);
+  }
+
+  /* OSCURECER IMAGEN */
+
+  .promo::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(transparent 25%, rgba(0, 0, 0, 0.964));
+  }
+
+  /* POSICIONES */
+
+  .grande {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .pequena {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .horizontal {
+    grid-column: 1 / 3;
+    grid-row: 2;
+  }
+
+  /* CONTENIDO */
+
+  .contenido {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 28px;
+    bottom: 25px;
+
+    max-width: 80%;
+  }
+
+  .contenido small {
+    color: #fffefb;
+
+    font-size: 7px;
+
+    letter-spacing: 3px;
+  }
+
+  .contenido h3 {
+    margin: 10px 0;
+
+    color: #eee;
+
+    font-family: Georgia, serif;
+
+    font-size: 38px;
+    font-weight: normal;
+
+    line-height: 1;
+  }
+
+  .contenido p {
+    margin: 0;
+
+    color: #999;
+
+    font-size: 9px;
+  }
+
+  .contenido strong {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #c9aa70;
+
+    font-family: Georgia, serif;
+
+    font-size: 14px;
+
+    font-weight: normal;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 800px) {
+    .promociones {
+      padding: 80px 30px;
+      width: auto;
+    }
+
+    .promos {
+      grid-template-columns: 1fr 1fr;
+
+      grid-template-rows: 240px 180px;
+    }
+
+    .contenido {
+      left: 20px;
+      bottom: 20px;
+    }
+
+    .contenido h3 {
+      font-size: 23px;
+    }
+  }
+
+  /* CELULAR */
+
+  @media (max-width: 600px) {
+    .promociones {
+      padding: 70px 20px;
+      width: auto;
+    }
+
+    .promociones > h2 {
+      font-size: 38px;
+    }
+
+    .promos {
+      display: flex;
+      flex-direction: column;
+      width: auto;
+      gap: 10px;
+    }
+
+    .promo {
+      width: 100%;
+      height: 260px;
+    }
+
+    .horizontal {
+      height: 260px;
+    }
+
+    .contenido {
+      left: 20px;
+      bottom: 20px;
+
+      max-width: 90%;
+    }
+
+    .contenido h3 {
+      font-size: 26px;
+    }
+    .contenido p {
+      font-size: 13px;
+    }
+    .contenido strong {
+      font-size: 20px;
+    }
+
+    .contenido small {
+    font-size: 11px;
+  }
+
+  }
+</style>

@@ -1,0 +1,202 @@
+<section class="cierre">
+  <div class="contenido">
+    <h2>
+      NOS VEMOS<br />
+      <strong>EN LA MINITA.</strong>
+    </h2>
+
+    <div class="linea"></div>
+
+    <p>COMIDA · BAR · MÚSICA · MOMENTOS</p>
+
+    <div class="botones">
+      <a href="#menu" class="btn"> VER MENÚ </a>
+
+      <a href="#ubicaciones" class="ubicacion"> ENCONTRAR SUCURSAL </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .cierre {
+    width: 100%;
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 12%;
+
+    position: relative;
+
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.85),
+        rgba(0, 0, 0, 0.65),
+        rgba(0, 0, 0, 0.8)
+      ),
+      url("/cierre.jpg");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  /* CONTENIDO */
+
+  .contenido {
+    max-width: 800px;
+  }
+
+  /* TITULO */
+
+  h2 {
+    margin: 0;
+
+    color: #eee;
+
+    font-family: Georgia, serif;
+
+    font-size: 80px;
+    font-weight: normal;
+
+    line-height: 0.95;
+  }
+
+  h2 strong {
+    color: #c9aa70;
+
+    font-weight: normal;
+  }
+
+  /* LINEA */
+
+  .linea {
+    width: 180px;
+    height: 1px;
+
+    background: #4d4029;
+
+    margin: 35px 0 25px;
+  }
+
+  /* TEXTO */
+
+  .contenido > p {
+    margin: 0 0 30px;
+
+    color: #777;
+
+    font-size: 8px;
+
+    letter-spacing: 4px;
+  }
+
+  /* BOTONES */
+
+  .botones {
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+  }
+
+  .btn {
+    padding: 12px 22px;
+
+    color: #c9aa70;
+
+    border: 1px solid #4d4029;
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  .ubicacion {
+    color: #999;
+    padding: 12px 22px;
+    text-decoration: none;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+  }
+
+  /* TABLET */
+
+  @media (max-width: 900px) {
+    .cierre {
+      min-height: 550px;
+
+      padding: 80px 7%;
+    }
+
+    h2 {
+      font-size: 65px;
+    }
+  }
+
+  /* CELULAR */
+
+  @media (max-width: 600px) {
+    .cierre {
+      min-height: 600px;
+
+      padding: 80px 25px;
+
+      background-position: center;
+    }
+
+    .contenido {
+      width: 100%;
+    }
+
+    h2 {
+      font-size: 48px;
+
+      line-height: 1;
+    }
+
+    .linea {
+      width: 120px;
+
+      margin: 25px 0 20px;
+    }
+
+    .contenido > p {
+      font-size: 12px;
+
+      letter-spacing: 2px;
+
+      line-height: 1.8;
+    }
+
+    .botones {
+      flex-direction: column;
+
+      align-items: flex-start;
+
+      gap: 18px;
+    }
+  }
+
+  /* CELULAR PEQUEÑO */
+
+  @media (max-width: 400px) {
+    .cierre {
+      min-height: 550px;
+
+      padding: 70px 20px;
+    }
+
+    h2 {
+      font-size: 40px;
+    }
+
+    /* .contenido > p {
+            font-size: 6px;
+        } */
+  }
+</style>
