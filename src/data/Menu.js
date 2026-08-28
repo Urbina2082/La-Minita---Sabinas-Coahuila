@@ -143,7 +143,7 @@ export const MenuData = [
             { nombre: "Al mojo de ajo", precio: { filete: 170, camaron: 190 } },
             { nombre: "Ajillo", precio: { filete: 170, camaron: 190 } },
             { nombre: "Entomatados", precio: { filete: 170, camaron: 190 } },
-            { nombre: "Metro bato al coco", precio: { filete: 170, camaron: 220 } }
+            { nombre: "Camarones ", precio: { Metrobato: 310,Coco: 220 } }
         ]
     },
 
