@@ -1,6 +1,18 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-02R0TH4E2K"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-02R0TH4E2K");
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
 
@@ -10,9 +22,9 @@
       name="description"
       content="La Minita Restaurante Bar. Disfruta de nuestros platillos, bebidas y un ambiente único."
     />
- 
-   <meta property="og:image" content="https://laminita.netlify.app/logs.jpg" />
-   
+
+    <meta property="og:image" content="https://laminita.netlify.app/logs.jpg" />
+
     <meta name="generator" content={Astro.generator} />
 
     <title>La Minita | Restaurante Bar</title>
